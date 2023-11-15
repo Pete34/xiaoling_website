@@ -1,0 +1,63 @@
+---
+const pageTitle = 'Reviews'
+import SiteLayout from '../layouts/SiteLayout.astro'
+import { Image } from 'astro:assets'
+
+import christopherCambell from '../media/headshots/christopher_cambell.jpeg'
+import cindyWu from '../media/headshots/cindy_wu.jpeg'
+import joshuaRawson from '../media/headshots/joshua_rawson.jpeg'
+import maryBethLee from '../media/headshots/mary_beth_lee.jpeg'
+
+import '../styles/global.css'
+---
+
+<SiteLayout pageTitle={pageTitle}>
+	<div class="review-info mt-8 bg-offwhite p-8">
+		<h1 data-lang-key="reviews-h1" class="ml-4 pb-4 text-4xl 
+		sm:text-3xl font-semibold"> </h1>
+
+		<p data-lang-key="reviews-subheading" class="ml-4 pb-8 text-xl"></p>
+	</div>
+
+	<div class="review-container">
+		<div class="review bg-blandgray p-8">
+			<Image class="person" src={christopherCambell} alt="Pretty young redhead girl headshot" />
+			<div class="review-wrapper">
+				<div data-lang-key="review-name1" class="review-name text-xl"></div>
+				<div data-lang-key="review-text1" class="review-text text-xl mb-4"></div>
+				<div data-lang-key="review-date1" class="date-completed italic"></div>
+			</div>
+		</div>
+		<div class="review bg-blandgray p-8">
+			<Image class="person" src={joshuaRawson} alt="young hipster guy headshot" />
+			<div class="review-wrapper">
+				<div
+					data-lang-key="review-name2"
+					class="review-name  sm:text-base text-xl"
+					 
+				>
+				</div>
+				<div data-lang-key="review-text2" class="review-text text-xl mb-4"></div>
+				<div data-lang-key="review-date2" class="date-completed italic"></div>
+			</div>
+		</div>
+		<div class="review bg-blandgray p-8">
+			<Image class="person" src={maryBethLee} alt="spunky cute young girl in ponytails headshot" />
+			<div class="review-wrapper">
+				<div data-lang-key="review-name3" class="review-name text-xl"></div>
+				<div data-lang-key="review-text3" class="review-text text-xl mb-4"></div>
+				<div data-lang-key="review-date3" class="date-completed italic"></div>
+			</div>
+		</div>
+		<div class="review bg-blandgray p-8">
+			<Image class="person" src={cindyWu} alt="Beautiful young brunette woman headshot" />
+			<div class="review-wrapper">
+				<div data-lang-key="review-name4" class="review-name   text-xl"></div>
+				<div data-lang-key="review-text4" class="review-text text-xl  mb-4"></div>
+				<div data-lang-key="review-date4" class="date-completed italic"></div>
+			</div>
+		</div>
+	</div>
+</SiteLayout>
+
+ 

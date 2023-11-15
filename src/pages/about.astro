@@ -1,0 +1,42 @@
+---
+const pageTitle = 'About'
+
+import '../styles/global.css'
+import SiteLayout from '../layouts/SiteLayout.astro'
+import { Image } from 'astro:assets'
+import circularSaw from '../media/circular-saw.jpeg'
+import manSweeping from '../media/man-sweeping.jpeg'
+import womanInKitchen from '../media/woman-in-kitchen.jpeg'
+
+---
+
+<SiteLayout pageTitle={pageTitle}>
+	<article class="basic-grid">
+		<Image class="span-2" src={circularSaw} alt="man cutting plank with circular" />
+		<div class="span-2 info-text bg-offwhite">
+			<h1 data-lang-key="about-h1" class="pb-8 sm:text-3xl text-4xl font-semibold">About Us</h1>
+			<p data-lang-key="about-subheading" class="pb-8 text-xl"></p>
+		</div>
+
+		<Image src={womanInKitchen} alt="Woman In kitchen" />
+
+		<Image src={manSweeping} alt="Asian Man sweeping with dog" />
+		<div class="info-text bg-boxgreen">
+			<div data-lang-key="quality-h1" class="pb-8 text-4xl font-semibold sm:text-3xl ">
+				Commitment To Quality
+			</div>
+			<p data-lang-key="quality-subheading" class="pb-8 text-xl"></p>
+		</div>
+
+		<div class="info-text bg-lightpink">
+			<div data-lang-key="respect-h1" class="pb-8 text-4xl font-semibold sm:text-3xl "></div>
+			<p data-lang-key="respect-subheading" class="pb-8 text-xl"></p>
+		</div>
+	</article>
+</SiteLayout>
+
+ 
+
+
+
+ 

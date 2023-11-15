@@ -1,0 +1,68 @@
+---
+const pageTitle = 'Home'
+import '../styles/global.css'
+
+import { Image } from 'astro:assets'
+import asianMan from '../media/asian_man_living.jpeg'
+import coffeeShop from '../media/coffee_shop.jpeg'
+import SiteLayout from '../layouts/SiteLayout.astro'
+---
+
+<SiteLayout pageTitle={pageTitle}>
+	<div class="basic-grid">
+		<!-- image -->
+
+		<Image src={asianMan} alt="Asian Man sitting in great living room" />
+
+		<!-- text block colored -->
+		<div class="text-block info-text bg-offwhite">
+			<h1 data-lang-key="hero-h1" class="pb-8 text-4xl md:text-3xl sm:text-3xl"></h1>
+			<p data-lang-key="hero-subheading" class="pb-8 text-xl"></p>
+			<div class="button-container">
+				<button class="rounded-lg bg-plantgreen p-1 pl-3 pr-3 text-white">
+					<a data-lang-key="hero-button" href="mailto:dream_home_reno@gmail.com?subject=Free%20Consultation"></a>
+				</button>
+			</div>
+		</div>
+
+		<!-- Future transform blurb component -->
+		<section class="span-2 info-text bg-blandgray">
+			<h1 data-lang-key="value-h1" class="pb-8 text-4xl sm:text-3xl font-semibold"></h1>
+			<div data-lang-key="value-subheading" class="pb-8 text-xl"></div>
+		</section>
+		<!-- Future biz component -->
+
+		<div class="info-text bg-boxgreen">
+			<h1 data-lang-key="business-value-h1" class="pb-8 text-4xl sm:text-3xl font-semibold"></h1>
+			<div data-lang-key="business-value-subheading" class="pb-8 text-xl"></div>
+		</div>
+
+		<Image src={coffeeShop} alt="Coffee Shop" />
+
+		<!-- Future process component -->
+		<section class="span-2 info-text bg-lightpink">
+			<h1 data-lang-key="process-h1" class="pb-8 text-4xl font-semibold sm:text-3xl"></h1>
+			<ol class="list-inside list-decimal pb-8 text-xl">
+				<li>
+					<span data-lang-key="process-subheading-1"> </span>
+				</li>
+				<li>
+					<span data-lang-key="process-subheading-2"> </span>
+				</li>
+				<li>
+					<span data-lang-key="process-subheading-3"> </span>
+				</li>
+				<li>
+					<span data-lang-key="process-subheading-4"> </span>
+				</li>
+				<li>
+					<span data-lang-key="process-subheading-5"> </span>
+				</li>
+			</ol>
+		</section>
+	</div>
+</SiteLayout>
+
+ 
+
+

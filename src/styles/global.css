@@ -1,0 +1,140 @@
+/* Import Google Font Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* Your other CSS styles below */
+
+/* Path: src/styles/global.css */
+body {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button-wrapper{
+    width: 100px;
+}
+
+.container {
+    min-height: 90vh;
+    /* Ensure the body takes at least the full viewport height */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.gallery-top{
+    margin-top: 3rem;
+}
+
+.review-container {
+    
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-auto-rows: minmax(250px, max-content);
+    margin-bottom: 0.5rem
+}
+
+.review {
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.review-info{
+    margin-bottom: 0.5em;
+}
+
+.review-wrapper {
+
+    margin-top: 4.75rem;
+    width: 90%;
+
+}
+
+.person {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    border: 8px solid #fff;
+    position: absolute;
+    top: 1.75rem;
+    left: 3.5rem;
+    object-fit: cover;
+
+
+}
+
+.review-name{
+    position: absolute;
+    top: 3.25rem;;
+    left: 9rem;
+    font-size: 1.5rem;
+    
+  
+}
+
+/* Additional styles go here */
+
+.gallery-grid {
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(300px, max-content);
+}
+
+.basic-grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.info-text {
+    padding: 4rem;
+}
+
+@media(max-width: 1000px) {
+
+    .basic-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .span-2 {
+        grid-column: span 1;
+    }
+
+
+
+}
+
+@media(max-width: 1200px) {
+
+   body{
+    margin: 1em;
+   }
+
+
+}
+
+html::view-transition {
+    position: fixed;
+    inset: 0;
+}
+
+::view-transition {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+ 

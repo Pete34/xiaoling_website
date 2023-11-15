@@ -1,0 +1,57 @@
+---
+
+import '../styles/menu.css'
+---
+
+<div transition:persist class="menu">
+	<h1 class="menu-company">
+		<a class="" href="/">Dream Home Renovations</a>
+	</h1>
+
+	<div class="nav-wrapper">
+		<h1 class="menu-letters">
+			<a data-lang-key="company-letters" href="/"></a>
+		</h1>
+		<a data-lang-key="menu-home" class="" href="/"> </a>
+		<a data-lang-key="menu-about" class="" href="/about/"></a>
+		<a data-lang-key="menu-gallery" class="" href="/gallery/"></a>
+		<a data-lang-key="menu-contact" class="" href="/contact/"></a>
+		<a data-lang-key="menu-reviews" class="" href="/reviews/"></a>
+
+		<button class="english-button" data-button="english" class="ml-1 sm:text-sm md:text-sm"
+			>EN</button
+		>
+		<button class="chinese-button" data-button="chinese" class="ml-2 sm:text-sm">简</button>
+		<!-- <button class="traditional-button" data-button="zh-Hant" class="ml-2 sm:text-sm"
+			>繁體中文</button
+		> -->
+		<button class="traditional-button" data-button="zh-Hant" class="ml-2 sm:text-sm">繁</button>
+	</div>
+</div>
+
+<script>
+	function addActiveToNav() {
+		const nav = document.querySelector('.nav-wrapper')
+		const navLinks = nav.querySelectorAll('a')
+		const currentURL = window.location.href
+		navLinks.forEach((link) => {
+			if (link.href === currentURL) {
+				link.classList.add('active')
+			}
+			if(link.href != currentURL) {
+				link.classList.remove('active')
+			}
+		})
+	}
+
+	addActiveToNav()
+
+	document.addEventListener(
+		'astro:after-swap',
+		() => {
+			
+			addActiveToNav()
+		},
+		{ once: false }
+	)
+</script>

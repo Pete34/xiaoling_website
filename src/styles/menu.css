@@ -1,0 +1,106 @@
+:root {
+    --offwhite: #FBF3E4;
+    --boxgreen: #DFEACE;
+    --lightpink: #F8ECEF;
+    --plantgreen: #7E7B34
+}
+
+button.active {
+    background: var(--plantgreen);
+    color: white;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.menu-letters {
+    display: none;
+}
+
+.menu-company {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-wrapper>a {
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+a.active[data-lang-key] {
+    text-underline-offset: .3rem;
+    text-decoration: underline;
+    color: var(--plantgreen);
+
+
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.english-button {
+
+    border: none;
+    background-color: var(--offwhite);
+    padding: 0.5em;
+    border-radius: 0.5em;
+
+    cursor: pointer;
+}
+
+.chinese-button {
+
+    border: none;
+    background-color: var(--lightpink);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.traditional-button {
+
+    border: none;
+    background-color: var(--boxgreen);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+
+
+@media(max-width: 1000px) {
+
+    .menu {
+        flex-direction: row;
+        margin-left: 1em
+    }
+
+    .nav-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .menu-company {
+        display: none;
+    }
+
+    button {
+        margin: 0.2em 0;
+        font-size: 0.8rem;
+    }
+
+
+}
