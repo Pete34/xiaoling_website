@@ -52,7 +52,7 @@
     const scrollButton = document.querySelector('.scroll');
 
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
+        if (window.scrollY> 100) {
             scrollButton.classList.add('active');
         } else {
             scrollButton.classList.remove('active');
