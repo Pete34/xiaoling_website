@@ -5,7 +5,7 @@
     --plantgreen: #7E7B34
 }
 
-button.active {
+button.is-active {
     background: var(--plantgreen);
     color: white;
 }
@@ -32,7 +32,7 @@ button.active {
 
 }
 
-a.active[data-lang-key] {
+a.is-active[data-lang-key] {
     text-underline-offset: .3rem;
     text-decoration: underline;
     color: var(--plantgreen);

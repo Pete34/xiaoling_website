@@ -1,0 +1,238 @@
+---
+// import '../styles/global.css'
+---
+
+<header class="header" transition:persist>
+	<nav class="navbar">
+		<a data-lang-key="company-name" class="nav-branding" href="/">Dream Home Renovations</a>
+        <a data-lang-key="company-letters" class="nav-letters" href="/">Dream Home Renovations</a>
+		<ul class="nav-menu">
+			<li class="nav-item">
+				<a data-lang-key="menu-home" href="/" class="nav-link">Home</a>
+			</li>
+			<li class="nav-item">
+				<a data-lang-key="menu-about" href="/about" class="nav-link">About</a>
+			</li>
+			<li class="nav-item">
+				<a data-lang-key="menu-gallery" href="gallery" class="nav-link">Gallery</a>
+			</li>
+			<li class="nav-item">
+				<a data-lang-key="menu-contact" href="/contact" class="nav-link">Contact</a>
+			</li>
+			<li class="nav-item">
+				<a data-lang-key="menu-reviews" href="/reviews" class="nav-link">Reviews</a>
+			</li>
+
+			<li class="buttons">
+				<button class="english-button" data-button="english" class="sm:text-sm md:text-sm"
+					>EN</button
+				>
+				<button class="chinese-button" data-button="chinese" class="sm:text-sm">简</button>
+				<!-- <button class="traditional-button" data-button="zh-Hant" class="ml-2 sm:text-sm"
+                >繁體中文</button
+                        > -->
+				<button class="traditional-button" data-button="zh-Hant" class="sm:text-sm">繁</button>
+			</li>
+		</ul>
+		<div class="hamburger">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+	</nav>
+</header>
+
+<style>
+	:root {
+		--offwhite: #fbf3e4;
+		--boxgreen: #dfeace;
+		--lightpink: #f8ecef;
+		--plantgreen: #7e7b34;
+	}
+
+	.nav-link.is-active {
+		text-underline-offset: 0.3rem;
+		text-decoration: underline;
+		color: var(--plantgreen);
+	}
+
+    .nav-letters {
+        display: none;
+        font-size:2rem;
+    }
+
+	button.active {
+		background: var(--plantgreen);
+		color: white;
+	}
+
+	.english-button {
+		border: none;
+		background-color: var(--offwhite);
+		padding: 0.5em;
+		border-radius: 0.5em;
+
+		cursor: pointer;
+	}
+
+	.chinese-button {
+		border: none;
+		background-color: var(--lightpink);
+		padding: 0.5em;
+		border-radius: 0.5em;
+		cursor: pointer;
+	}
+
+	.traditional-button {
+		border: none;
+		background-color: var(--boxgreen);
+		padding: 0.5em;
+		border-radius: 0.5em;
+		cursor: pointer;
+	}
+
+	header {
+        margin-top: 2rem;
+		/* background: #262626; */
+		transition: 0.3s ease-in-out;
+	}
+
+	header.active {
+		margin-bottom: 400px;
+	}
+
+	.navbar {
+		min-height: 70px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+	}
+
+	.nav-menu {
+        
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 25px;
+	}
+
+	.nav-branding {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	.nav-link {
+		transition: 0.7s ease;
+	}
+
+	.nav-link:hover {
+		color: dodgerblue;
+	}
+
+	.hamburger {
+		display: none;
+		cursor: pointer;
+	}
+
+	.bar {
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		transition: all 0.3s ease-in-out;
+		background: #262626;
+		/* background-color: white; */
+	}
+
+	@media (max-width: 900px) {
+		.hamburger {
+			display: block;
+		}
+
+		.hamburger.active .bar:nth-child(2) {
+			opacity: 0;
+		}
+		.hamburger.active .bar:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+
+		.hamburger.active .bar:nth-child(3) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+
+		.nav-menu {
+			position: fixed;
+			left: -100%;
+			top: 70px;
+			gap: 0;
+			flex-direction: column;
+			width: 100%;
+			/* background-color: #262626; */
+			text-align: center;
+			transition: 0.3s ease-in-out;
+		}
+
+		.nav-item {
+			margin: 16px;
+		}
+
+		.nav-menu.active {
+			left: 0;
+		}
+
+        .nav-letters{
+            display: block;
+        }
+
+        .nav-branding{
+            display:none;
+        }
+	}
+</style>
+
+<script>
+	const hamburger = document.querySelector('.hamburger')
+	const navMenu = document.querySelector('.nav-menu')
+	const header = document.querySelector('.header')
+
+	hamburger.addEventListener('click', mobileMenu)
+
+	function mobileMenu() {
+		hamburger.classList.toggle('active')
+		navMenu.classList.toggle('active')
+		header.classList.toggle('active')
+	}
+
+	document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', closeMenu))
+
+	function closeMenu() {
+		hamburger.classList.remove('active')
+		navMenu.classList.remove('active')
+		header.classList.remove('active')
+	}
+
+	function addActiveToNav() {
+		const nav = document.querySelector('.navbar')
+		const navLinks = nav.querySelectorAll('a')
+		const currentURL = window.location.href
+		navLinks.forEach((link) => {
+			if (link.href === currentURL) {
+				link.classList.add('is-active')
+			}
+			if (link.href != currentURL) {
+				link.classList.remove('is-active')
+			}
+		})
+	}
+
+	addActiveToNav()
+
+	document.addEventListener(
+		'astro:after-swap',
+		() => {
+			addActiveToNav()
+		},
+		{ once: false }
+	)
+</script>

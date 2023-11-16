@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro'
 import ScrollToTopButton from '../components/ScrollToTopButton.astro'
 import { ViewTransitions } from 'astro:transitions'
 import '../styles/global.css'
+import Hamburger from '../components/Hamburger.astro'
 
 const { pageTitle } = Astro.props
 ---
@@ -17,7 +18,8 @@ const { pageTitle } = Astro.props
 		<ViewTransitions />
 	</head>
 	<body>
-		<Navigation />
+		<Hamburger />
+		<!-- <Navigation /> -->
 		<ScrollToTopButton />
 		<article transition:animate="slide">
 			<slot />
@@ -25,8 +27,7 @@ const { pageTitle } = Astro.props
 		</article>
 		<Footer />
 		<script>
-
-			import {translation} from '../scripts/translation-literal.js';
+			import { translation } from '../scripts/translation-literal.js'
 
 			// Get buttons
 			const englishButton = document.querySelector('[data-button="english"]')

@@ -4,37 +4,23 @@ import '../styles/global.css'
 import SiteLayout from '../layouts/SiteLayout.astro'
 import { Image } from 'astro:assets'
 import xiaoling from '../media/xiaoling.jpeg'
-
-
 ---
 
 <SiteLayout pageTitle={pageTitle}>
 	<div class="basic-grid">
-		<Image src={xiaoling} alt="Asian woman wearing a mask" />
-		<section class="contact-section info-text bg-gray6">
-			<h1 data-lang-key="contact-h1" class="pb-8 text-4xl sm:text-xl md:text-2xl sm:pb-4">Contact Information</h1>
-			<p class="pb-1 sm:text-xl text-2xl">
-				<span data-lang-key="contact-email" class="font-semibold">Email:</span>
+		<Image class="contact-image" src={xiaoling} alt="Asian woman wearing a mask" />
+		<section class="contact-section">
+			<div data-lang-key="contact-h1" class="contact-header">Contact Information</div>
+			<p class="contact-email-data">
+				<span data-lang-key="contact-email" class="contact-email-label">Email:</span>
 				<a href="mailto:dream_home_reno@gmail.com?subject=Renovation%20Inquiry"
-					><span class="ml-2 text-plantgreen">dream_home_reno@gmail.com</span></a
+					><span class="contact-email-address">dream_home_reno@gmail.com</span></a
 				>
 			</p>
-			<p class="pb-1 sm:text-xl text-2xl">
-				<span data-lang-key="contact-phone" class="font-semibold">Phone:</span>
-				<a href="tel:+1-626-693-7649"><span class="ml-2 text-plantgreen">1-626-693-7649</span></a>
+			<p class="contact-phone-data">
+				<span data-lang-key="contact-phone" class="contact-phone-label">Phone:</span>
+				<a href="tel:+1-626-693-7649"><span class="contact-phone-number">1-626-693-7649</span></a>
 			</p>
 		</section>
 	</div>
-	<style>
-		.contact-section {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			/* align-items: center; */
-			padding: 2rem;
-		}
-	</style>
-
- 
-
 </SiteLayout>
