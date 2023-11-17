@@ -1,5 +1,4 @@
 ---
-import Navigation from '../components/Navigation.astro'
 import Footer from '../components/Footer.astro'
 import ScrollToTopButton from '../components/ScrollToTopButton.astro'
 import { ViewTransitions } from 'astro:transitions'
@@ -120,6 +119,21 @@ const { pageTitle } = Astro.props
 				tradChineseButton.classList.add('active')
 			}
 
+			function EnglishSelected() {
+				setLanguage('en')
+
+				DisplayLanguage()
+			}
+			function ChineseSelected() {
+				setLanguage('zh')
+				DisplayLanguage()
+			}
+
+			function TraditionalChineseSelected() {
+				setLanguage('tradZh')
+				DisplayLanguage()
+			}
+
 			function checkBold(keyValue: string, language: string) {
 				const bold = keyValue.includes('h1')
 
@@ -140,23 +154,6 @@ const { pageTitle } = Astro.props
 				return makeBold
 			}
 
-			function EnglishSelected() {
-				setLanguage('en')
-
-				DisplayLanguage()
-			}
-			function ChineseSelected() {
-				setLanguage('zh')
-
-				DisplayLanguage()
-			}
-
-			function TraditionalChineseSelected() {
-				setLanguage('tradZh')
-
-				DisplayLanguage()
-			}
-
 			DisplayLanguage()
 
 			document.addEventListener(
@@ -165,9 +162,33 @@ const { pageTitle } = Astro.props
 					// This only runs once.
 					console.log('after-swap event fired')
 					DisplayLanguage()
+					ShowCurrentPage()
 				},
 				{ once: false }
 			)
+
+			const nav = document.querySelector('.navbar')
+			const navLinks = nav.querySelectorAll('a')
+
+			// Function to show current page
+			function ShowCurrentPage() {
+				// console.log('ShowCurrentPage running')
+
+				const currentURL = window.location.href
+
+				navLinks.forEach((link) => {
+					if (link.href === currentURL) {
+						//adding class
+						link.classList.add('is-active')
+					}
+					if (link.href !== currentURL) {
+						//removing class
+						link.classList.remove('is-active')
+					}
+				})
+			}
+
+			ShowCurrentPage()
 		</script>
 	</body>
 </html>

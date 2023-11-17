@@ -17,6 +17,10 @@ body {
     margin: 0 auto;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 .button-wrapper {
     width: 100px;
 }
@@ -131,6 +135,10 @@ body {
 .contact-email-address, .contact-phone-number {
     font-size: 1.5rem;
     color: var(--plantgreen);
+}
+
+.info-text{
+    padding: 4em;
 }
 
 

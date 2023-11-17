@@ -5,22 +5,22 @@
 <header class="header" transition:persist>
 	<nav class="navbar">
 		<a data-lang-key="company-name" class="nav-branding" href="/">Dream Home Renovations</a>
-        <a data-lang-key="company-letters" class="nav-letters" href="/">Dream Home Renovations</a>
+		<a data-lang-key="company-letters" class="nav-letters" href="/">Dream Home Renovations</a>
 		<ul class="nav-menu">
 			<li class="nav-item">
 				<a data-lang-key="menu-home" href="/" class="nav-link">Home</a>
 			</li>
 			<li class="nav-item">
-				<a data-lang-key="menu-about" href="/about" class="nav-link">About</a>
+				<a data-lang-key="menu-about" href="/about/" class="nav-link">About</a>
 			</li>
 			<li class="nav-item">
-				<a data-lang-key="menu-gallery" href="gallery" class="nav-link">Gallery</a>
+				<a data-lang-key="menu-gallery" href="/gallery/" class="nav-link">Gallery</a>
 			</li>
 			<li class="nav-item">
-				<a data-lang-key="menu-contact" href="/contact" class="nav-link">Contact</a>
+				<a data-lang-key="menu-contact" href="/contact/" class="nav-link">Contact</a>
 			</li>
 			<li class="nav-item">
-				<a data-lang-key="menu-reviews" href="/reviews" class="nav-link">Reviews</a>
+				<a data-lang-key="menu-reviews" href="/reviews/" class="nav-link">Reviews</a>
 			</li>
 
 			<li class="buttons">
@@ -28,9 +28,7 @@
 					>EN</button
 				>
 				<button class="chinese-button" data-button="chinese" class="sm:text-sm">简</button>
-				<!-- <button class="traditional-button" data-button="zh-Hant" class="ml-2 sm:text-sm"
-                >繁體中文</button
-                        > -->
+
 				<button class="traditional-button" data-button="zh-Hant" class="sm:text-sm">繁</button>
 			</li>
 		</ul>
@@ -56,10 +54,10 @@
 		color: var(--plantgreen);
 	}
 
-    .nav-letters {
-        display: none;
-        font-size:2rem;
-    }
+	.nav-letters {
+		display: none;
+		font-size: 2rem;
+	}
 
 	button.active {
 		background: var(--plantgreen);
@@ -92,7 +90,7 @@
 	}
 
 	header {
-        margin-top: 2rem;
+		margin-top: 2rem;
 		/* background: #262626; */
 		transition: 0.3s ease-in-out;
 	}
@@ -102,15 +100,16 @@
 	}
 
 	.navbar {
+		background: white;
 		min-height: 70px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 2rem;
+		position: relative;
 	}
 
 	.nav-menu {
-        
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -162,7 +161,7 @@
 		}
 
 		.nav-menu {
-			position: fixed;
+			position: absolute;
 			left: -100%;
 			top: 70px;
 			gap: 0;
@@ -181,58 +180,36 @@
 			left: 0;
 		}
 
-        .nav-letters{
-            display: block;
-        }
+		.nav-letters {
+			display: block;
+		}
 
-        .nav-branding{
-            display:none;
-        }
+		.nav-branding {
+			display: none;
+		}
 	}
 </style>
 
 <script>
-	const hamburger = document.querySelector('.hamburger')
-	const navMenu = document.querySelector('.nav-menu')
-	const header = document.querySelector('.header')
-
-	hamburger.addEventListener('click', mobileMenu)
-
-	function mobileMenu() {
-		hamburger.classList.toggle('active')
-		navMenu.classList.toggle('active')
-		header.classList.toggle('active')
-	}
-
 	document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', closeMenu))
 
+	document.querySelector('.hamburger').addEventListener('click', mobileMenu)
+
+	// opens mobile menu
+	function mobileMenu() {
+		document.querySelector('.hamburger').classList.toggle('active')
+		document.querySelector('.nav-menu').classList.toggle('active')
+		document.querySelector('.header').classList.toggle('active')
+		document.querySelector('body').classList.toggle('menu-open')
+
+		
+	}
+
+	// closes mobile menu
 	function closeMenu() {
-		hamburger.classList.remove('active')
-		navMenu.classList.remove('active')
-		header.classList.remove('active')
+		document.querySelector('.hamburger').classList.remove('active')
+		document.querySelector('.nav-menu').classList.remove('active')
+		document.querySelector('.header').classList.remove('active')
+		document.querySelector('body').classList.remove('menu-open')
 	}
-
-	function addActiveToNav() {
-		const nav = document.querySelector('.navbar')
-		const navLinks = nav.querySelectorAll('a')
-		const currentURL = window.location.href
-		navLinks.forEach((link) => {
-			if (link.href === currentURL) {
-				link.classList.add('is-active')
-			}
-			if (link.href != currentURL) {
-				link.classList.remove('is-active')
-			}
-		})
-	}
-
-	addActiveToNav()
-
-	document.addEventListener(
-		'astro:after-swap',
-		() => {
-			addActiveToNav()
-		},
-		{ once: false }
-	)
 </script>

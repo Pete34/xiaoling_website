@@ -46,7 +46,7 @@ export const translation = {
 		tradZh: '評論'
 	},
 	'hero-h1': {
-		en: 'Renovation Done, Right.',
+		en: 'Renovation Done, Right!',
 		zh: '装修有道',
 		tradZh: '装修有道'
 	},
