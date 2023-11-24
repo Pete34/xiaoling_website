@@ -1,9 +1,4 @@
-:root {
-    --offwhite: #FBF3E4;
-    --boxgreen: #DFEACE;
-    --lightpink: #F8ECEF;
-    --plantgreen: #7E7B34
-}
+ 
 
 button.is-active {
     background: var(--plantgreen);

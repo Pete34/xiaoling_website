@@ -1,0 +1,67 @@
+---
+import { type CollectionEntry } from 'astro:content'
+
+type Props = {
+	post: CollectionEntry<'posts'>
+}
+const { post } = Astro.props
+const { title, image} = post.data
+---
+
+<article class="post-card">
+	<div class="image-container">
+		<a href={`/posts/${post.slug}`}>
+			<img class="image" src={image.url} alt={image.alt} />
+		</a>
+		<a href={`/posts/${post.slug}`}>
+			<h2 data-lang-key={post.slug + "-title" }class="image-title">{title}</h2>
+		</a>
+	</div>
+</article>
+
+<style>
+ 
+	.post-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+
+		transition: all 0.2s ease-in-out;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	.post-card:hover {
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+		 
+	}
+
+	.image-container img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1.5rem;
+	}
+
+	.image-container img {
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.image-container:hover img {
+		transform: scale(1.01);
+	}
+
+	.post-card a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.image-title {
+		margin: 1rem 1rem 1rem 1rem;
+		font-size: 1.2rem;
+		font-weight: 600;
+
+		text-align: center;
+		color: black;
+	}
+</style>

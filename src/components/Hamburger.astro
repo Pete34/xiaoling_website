@@ -1,5 +1,5 @@
 ---
-// import '../styles/global.css'
+
 ---
 
 <header class="header" transition:persist>
@@ -41,13 +41,6 @@
 </header>
 
 <style>
-	:root {
-		--offwhite: #fbf3e4;
-		--boxgreen: #dfeace;
-		--lightpink: #f8ecef;
-		--plantgreen: #7e7b34;
-	}
-
 	.nav-link.is-active {
 		text-underline-offset: 0.3rem;
 		text-decoration: underline;
@@ -105,7 +98,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 2rem;
+		/* padding: 0 2rem; */
 		position: relative;
 	}
 
@@ -191,9 +184,11 @@
 </style>
 
 <script>
-	document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', closeMenu))
+	function runMenu() {
+		document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', closeMenu))
 
-	document.querySelector('.hamburger').addEventListener('click', mobileMenu)
+		document.querySelector('.hamburger').addEventListener('click', mobileMenu)
+	}
 
 	// opens mobile menu
 	function mobileMenu() {
@@ -201,8 +196,6 @@
 		document.querySelector('.nav-menu').classList.toggle('active')
 		document.querySelector('.header').classList.toggle('active')
 		document.querySelector('body').classList.toggle('menu-open')
-
-		
 	}
 
 	// closes mobile menu
@@ -212,4 +205,16 @@
 		document.querySelector('.header').classList.remove('active')
 		document.querySelector('body').classList.remove('menu-open')
 	}
+
+	runMenu()
+
+	document.addEventListener(
+		'astro:after-swap',
+		() => {
+			// console.log('after-swap event fired')
+			runMenu()
+		},
+		{ once: false }
+	)
 </script>
+

@@ -2,41 +2,61 @@
 const pageTitle = 'Gallery'
 import SiteLayout from '../layouts/SiteLayout.astro'
 import '../styles/global.css'
-import { Image } from 'astro:assets'
-import darkBrownShower from '../media/gallery_images/dark_brown_shower.jpg'
-import grayWhiteKitchen from '../media/gallery_images/gray_white_kitchen.jpg'
-import grayWoodFloor from '../media/gallery_images/gray_wood_floor.jpg'
-import largeBlackWhiteShower from '../media/gallery_images/large_black_white_shower.jpg'
-import greyKitchen from '../media/gallery_images/grey-kitchen.jpg'
-import largeBrownShower from '../media/gallery_images/large_brown_shower.jpg'
-import lightBrownKitchen from '../media/gallery_images/light_brown_kitchen.jpg'
-import lightBrownSilverShower from '../media/gallery_images/light_brown_silver_shower.jpg'
-import orangeCounter from '../media/gallery_images/orange_counter.jpg'
-import woodTileShower from '../media/gallery_images/wood_tile_shower.jpg'
-import tealWhiteKitchen from '../media/gallery_images/teal_white_kitchen.jpg'
+
+import { getCollection } from 'astro:content'
+import PostCard from '../components/PostCard.astro'
+const posts = await getCollection('posts')
+const movies = await getCollection('movies')
 ---
 
 <SiteLayout pageTitle={pageTitle}>
-	<div class="mt-8 bg-boxgreen gallery-top p-8">
-		<h1 data-lang-key="gallery-h1" class="mb-4 mt-4 text-4xl sm:text-3xl font-semibold"></h1>
+	<div class="gallery-top mt-8 bg-boxgreen p-8">
+		<h1 data-lang-key="gallery-h1" class="mb-4 mt-4 text-4xl font-semibold sm:text-3xl"></h1>
 		<p data-lang-key="gallery-subheading" class="pb-8 text-xl sm:text-lg"></p>
 	</div>
-	<div class="gallery-grid">
-		<Image src={orangeCounter} alt="Dark brown shower" />
-		<Image src={tealWhiteKitchen} alt="Dark brown shower" />
-		<Image src={darkBrownShower} alt="Dark brown shower" />
-		<Image src={grayWhiteKitchen} alt="Dark brown shower" />
-		<Image src={grayWoodFloor} alt="Dark brown shower" />
-		<Image src={largeBlackWhiteShower} alt="Dark brown shower" />
-		<Image src={greyKitchen} alt="Dark brown shower" />
-		<Image src={largeBrownShower} alt="Dark brown shower" />
-		<Image src={lightBrownKitchen} alt="Dark brown shower" />
-		<Image src={lightBrownSilverShower} alt="Dark brown shower" />
 
-		<Image src={woodTileShower} alt="Dark brown shower" />
-		
+	<div class="gallery-grid">
+		{posts.map((post) => <PostCard post={post} />)}
+	</div>
+
+	<div class="video-info">
+		<h2 data-lang-key="gallery-movie-h2" class="video-header">Movies</h2>
+		<p data-lang-key="gallery-movie-subhead" class="video-subheader">
+			Here are some videos of our work.
+		</p>
+	</div>
+
+	<div class="movie-wrapper">
+		{
+			movies.map((movie) => (
+				<div class="video-container">
+					<video controls>
+						<source src={movie.data.movie} type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			))
+		}
 	</div>
 </SiteLayout>
 
- 
+<style>
+	.movie-wrapper {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+		background: var(--boxgreen);
+	}
 
+	.video-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+		height: auto;
+	}
+</style>

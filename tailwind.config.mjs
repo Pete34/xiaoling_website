@@ -9,7 +9,8 @@ export default {
         blandgray: "#F5F5F5",
         boxgreen: "#DFEACE",
         lightpink: "#F8ECEF",
-        gray6:"#f2f2f2"
+        gray6: "#f2f2f2"
+        
       },
     },
     plugins: [],

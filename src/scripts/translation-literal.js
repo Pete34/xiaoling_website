@@ -251,5 +251,129 @@ export const translation = {
 		en: 'Completed in August 2021',
 		zh: '2021年8月完成',
 		tradZh: '2021年8月完成'
+	},
+
+	'post-1-title': {
+		en: "Tea's Memory Bubble Tea Shop",
+		zh: '茶的记忆奶茶店',
+		tradZh: '茶的記憶奶茶店'
+	},
+
+	'post-1-description': {
+		en: 'A fun project for a local bubble tea shop in Frisco Texas',
+		zh: '当地奶茶店的有趣项目。',
+		tradZh: '當地奶茶店的有趣項目。'
+	},
+	'post-2-title': {
+		en: 'Simple Gray and White Kitchen',
+		zh: '简单的灰白色厨房',
+		tradZh: '簡單的灰白色廚房'
+	},
+
+	'post-2-description': {
+		en: 'Client wanted a simple gray and white kitchen with updated appliances and a gray luxury vinyl floor.',
+		zh: '客户想要一个简单的灰白色厨房，配有更新的电器和灰色豪华乙烯基地板。',
+		tradZh: '客戶想要一個簡單的灰白色廚房，配有更新的電器和灰色豪華乙烯基地板。'
+	},
+	'post-3-title': {
+		en: 'Modern Wood Flooring',
+		zh: '现代木地板',
+		tradZh: '現代木地板'
+	},
+
+	'post-3-description': {
+		en: 'Client in San Diego wanted a modern wood floor to replace her old carpet',
+		zh: '圣地亚哥的客户想要一种现代的木地板来取代她的旧地毯',
+		tradZh: '聖地亞哥的客戶想要一種現代的木地板來取代她的舊地毯'
+	},
+	'post-4-title': {
+		en: 'A Sleek and Modern Gray and White Kitchen - on a Budget!',
+		zh: '时尚现代的灰白色厨房-预算有限！',
+		tradZh: '時尚現代的灰白色廚房-預算有限！'
+	},
+
+	'post-4-description': {
+		en: 'A client in San Diego wanted a sleek and modern kitchen on a budget. We were able to deliver! The gray and white color scheme was very popular in 2020.',
+		zh: '圣地亚哥的一位客户想要一个时尚的现代厨房，预算有限。我们能够交付！灰白色系在2020年非常受欢迎。',
+		tradZh: '聖地亞哥的一位客戶想要一個時尚的現代廚房，預算有限。我們能夠交付！灰白色系在2020年非常受歡迎。'
+	},
+	'post-5-title': {
+		en: 'A Modern Shower Room',
+		zh: '现代淋浴房',
+		tradZh: '現代淋浴房'
+	},
+
+	'post-5-description': {
+		en: 'Customer in San Diego wanted a modern shower room that could be  used by multiple people at the same time.',
+		zh: '圣地亚哥的客户想要一个现代的淋浴房，可以同时供多人使用。',
+		tradZh: '聖地亞哥的客戶想要一個現代的淋浴房，可以同時供多人使用。'
+	},
+	'post-6-title': {
+		en: 'A Modern Open Concept Bathroom',
+		zh: '现代开放式概念浴室',
+		tradZh: '現代開放式概念浴室'
+		 
+	},
+
+	'post-6-description': {
+		en: 'A San Diego Customer wanted a modern open concept bathroom with a large shower and a separate bathtub.',
+		zh: '圣地亚哥的一位客户想要一个现代的开放式概念浴室，配有大型淋浴房和独立的浴缸。',
+		tradZh: '聖地亞哥的一位客戶想要一個現代的開放式概念浴室，配有大型淋浴房和獨立的浴缸。'
+	},
+	'post-7-title': {
+		en: 'Cost Effective Kitchen Remodel',
+		zh: '成本效益的厨房改造',
+		tradZh: '成本效益的廚房改造'
+	},
+
+	'post-7-description': {
+		en: 'A client in San Diego wanted a cost effective kitchen remodel to be used as a rental property.',
+		zh: '圣地亚哥的一位客户想要一种成本效益的厨房改造，用作出租物业。',
+		tradZh: '聖地亞哥的一位客戶想要一種成本效益的廚房改造，用作出租物業。'
+	},
+	'post-8-title': {
+		en: 'Modern Shower with Raindrop Shower Head',
+		zh: '现代淋浴房与雨滴淋浴头',
+		tradZh: '現代淋浴房與雨滴淋浴頭'
+	},
+
+	'post-8-description': {
+		en: 'Customer wanted a modern shower in a tight space. We provided a solution with a raindrop shower head.and a glass door.',
+		zh: '客户想要一个现代的淋浴房在一个狭窄的空间。我们提供了一个解决方案与雨滴淋浴头和玻璃门。',
+		tradZh: '客戶想要一個現代的淋浴房在一個狹窄的空間。我們提供了一個解決方案與雨滴淋浴頭和玻璃門。'
+
+	},
+	'post-9-title': {
+		en: 'Classy Teal and White Modern Kitchen',
+		zh: '优雅的蓝绿色和白色现代厨房',
+		tradZh: '優雅的藍綠色和白色現代廚房'
+	},
+
+	'post-9-description': {
+		en: 'This job was one of our favorites. The client wanted a modern kitchen with a teal and white color scheme. But with a modern look and still in budget.',
+		zh: '这项工作是我们最喜欢的。客户想要一个现代的厨房与蓝绿色和白色的配色方案。但是具有现代外观，仍然在预算内。',
+		tradZh: '這項工作是我們最喜歡的。客戶想要一個現代的廚房與藍綠色和白色的配色方案。但是具有現代外觀，仍然在預算內。'
+	},
+	'post-10-title': {
+		en: 'Modern Shower with Brown Tiles',
+		zh: '如何选择合适的承包商',
+		tradZh: '如何選擇合適的承包商'
+	},
+
+	'post-10-description': {
+		en: 'A San Diego couple wanted a tastefully updated shower. We delivered. The brown tile and glass shower door give this bathroom a modern look.',
+		zh: '圣地亚哥一对夫妇想要一个品味独特的淋浴间。我们交付了。棕色的瓷砖和玻璃淋浴门使这间浴室看起来很现代。',
+		tradZh:	'聖地亞哥一對夫妻想要一個品味獨特的淋浴間。我們交付了。棕色的瓷磚和玻璃淋浴門使這間浴室看起來很現代。'
+	},
+	'gallery-movie-h2': {
+		en: 'Movies',
+		zh: '电影',
+		tradZh: '電影'
+	},
+	'gallery-movie-subhead': {
+		en: 'Watch our movies to see some of our work',
+		zh: '观看我们的电影，看看我们的工作',
+		tradZh: '觀看我們的電影，看看我們的工作'
 	}
+
 }
