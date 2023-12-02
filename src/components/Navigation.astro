@@ -1,12 +1,16 @@
 ---
 
 import '../styles/menu.css'
+import { Image } from 'astro:assets'
+import logo from '/logo/logo.svg'
 ---
 
 <div transition:persist class="menu">
-	<h1 class="menu-company">
+	<!-- <h1 class="menu-company">
 		<a class="" href="/">Dream Home Renovations</a>
-	</h1>
+	</h1> -->
+
+	<Image src={logo} alt="" />
 
 	<div class="nav-wrapper">
 		<h1 class="menu-letters">

@@ -6,19 +6,19 @@ export const translation = {
 	},
 	'company-copyright': {
 		en: '© Dream Home Renovation LLC',
-		zh: '© 梦想家居装修',
-		tradZh: '© 夢想家居裝修'
+		zh: '© 温馨家园有限公司',
+		tradZh: '© 溫馨家園有限公司'
 	},
 
 	'company-name': {
 		en: 'Dream Home Renovation',
-		zh: '梦想家居装修',
-		tradZh: '夢想家居裝修'
+		zh: '温馨家园',
+		tradZh: '溫馨家園'
 	},
 	'company-letters': {
 		en: 'DHR',
-		zh: '梦想家居装修',
-		tradZh: '夢想家居裝修'
+		zh: '温馨家园',
+		tradZh: '溫馨家園'
 	},
 	'menu-home': {
 		en: 'Home',
@@ -67,9 +67,8 @@ export const translation = {
 	},
 	'value-subheading': {
 		en: "Dream Home Renovation will work with you to transform your home in any way you like. We will bring your vision to life, and improve your home's value. We strive to exceed your expectations.",
-		zh: ' 梦想家居装修将与您合作，根据您的喜好改造您的家。我们将实现您的愿景，提升您房屋的价值。我们努力超越您的期望。',
-		tradZh:
-			'夢想家居裝修能與您合作，根據您的喜好改造您的家。我們將實現您的願景，提升您房屋的價值。我們會努力超越您的期望。'
+		zh: ' 温馨家园将与您合作，根据您的喜好改造您的家。我们将实现您的愿景，提升您房屋的价值。我们努力超越您的期望。',
+		tradZh: ' 溫馨家園將與您合作，根據您的喜好改造您的家。我們將實現您的願景，提升您房屋的價值。我們努力超越您的期望。'
 	},
 	'business-value-h1': {
 		en: 'We can remodel your business',
@@ -150,8 +149,8 @@ export const translation = {
 	},
 	'contact-email': {
 		en: 'Email: ',
-		zh: '电子邮件：',
-		tradZh: '電子郵件：'
+		zh: '电邮：',
+		tradZh: '電郵：'
 	},
 	'contact-phone': {
 		en: 'Phone: ',
@@ -295,7 +294,8 @@ export const translation = {
 	'post-4-description': {
 		en: 'A client in San Diego wanted a sleek and modern kitchen on a budget. We were able to deliver! The gray and white color scheme was very popular in 2020.',
 		zh: '圣地亚哥的一位客户想要一个时尚的现代厨房，预算有限。我们能够交付！灰白色系在2020年非常受欢迎。',
-		tradZh: '聖地亞哥的一位客戶想要一個時尚的現代廚房，預算有限。我們能夠交付！灰白色系在2020年非常受歡迎。'
+		tradZh:
+			'聖地亞哥的一位客戶想要一個時尚的現代廚房，預算有限。我們能夠交付！灰白色系在2020年非常受歡迎。'
 	},
 	'post-5-title': {
 		en: 'A Modern Shower Room',
@@ -312,7 +312,6 @@ export const translation = {
 		en: 'A Modern Open Concept Bathroom',
 		zh: '现代开放式概念浴室',
 		tradZh: '現代開放式概念浴室'
-		 
 	},
 
 	'post-6-description': {
@@ -341,7 +340,6 @@ export const translation = {
 		en: 'Customer wanted a modern shower in a tight space. We provided a solution with a raindrop shower head.and a glass door.',
 		zh: '客户想要一个现代的淋浴房在一个狭窄的空间。我们提供了一个解决方案与雨滴淋浴头和玻璃门。',
 		tradZh: '客戶想要一個現代的淋浴房在一個狹窄的空間。我們提供了一個解決方案與雨滴淋浴頭和玻璃門。'
-
 	},
 	'post-9-title': {
 		en: 'Classy Teal and White Modern Kitchen',
@@ -352,7 +350,8 @@ export const translation = {
 	'post-9-description': {
 		en: 'This job was one of our favorites. The client wanted a modern kitchen with a teal and white color scheme. But with a modern look and still in budget.',
 		zh: '这项工作是我们最喜欢的。客户想要一个现代的厨房与蓝绿色和白色的配色方案。但是具有现代外观，仍然在预算内。',
-		tradZh: '這項工作是我們最喜歡的。客戶想要一個現代的廚房與藍綠色和白色的配色方案。但是具有現代外觀，仍然在預算內。'
+		tradZh:
+			'這項工作是我們最喜歡的。客戶想要一個現代的廚房與藍綠色和白色的配色方案。但是具有現代外觀，仍然在預算內。'
 	},
 	'post-10-title': {
 		en: 'Modern Shower with Brown Tiles',
@@ -363,7 +362,8 @@ export const translation = {
 	'post-10-description': {
 		en: 'A San Diego couple wanted a tastefully updated shower. We delivered. The brown tile and glass shower door give this bathroom a modern look.',
 		zh: '圣地亚哥一对夫妇想要一个品味独特的淋浴间。我们交付了。棕色的瓷砖和玻璃淋浴门使这间浴室看起来很现代。',
-		tradZh:	'聖地亞哥一對夫妻想要一個品味獨特的淋浴間。我們交付了。棕色的瓷磚和玻璃淋浴門使這間浴室看起來很現代。'
+		tradZh:
+			'聖地亞哥一對夫妻想要一個品味獨特的淋浴間。我們交付了。棕色的瓷磚和玻璃淋浴門使這間浴室看起來很現代。'
 	},
 	'gallery-movie-h2': {
 		en: 'Movies',
@@ -375,5 +375,4 @@ export const translation = {
 		zh: '观看我们的电影，看看我们的工作',
 		tradZh: '觀看我們的電影，看看我們的工作'
 	}
-
 }
